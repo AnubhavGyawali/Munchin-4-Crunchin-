@@ -500,8 +500,5 @@ cb {
     width: 1000px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
 }
-@media (max-width: 600px) {
-    /* Adjustments for small screens */
-}
 
 
