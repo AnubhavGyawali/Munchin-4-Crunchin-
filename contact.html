@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Munchin' 4 Crunchin'</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Please fill out the form below to get in touch.</p>
+            <form id="contact-form" action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+            <div id="confirmation-message" style="display: none; color: green; font-size: 1.2em; margin-top: 20px;">
+                We Will Reach Back To You As Soon As We Can :)
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Munchin' 4 Crunchin'. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to handle form submission and display confirmation message
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting the traditional way
+            
+            // Show the confirmation message
+            document.getElementById('confirmation-message').style.display = 'block';
+
+            // Refresh the page after a short delay
+            setTimeout(function() {
+                location.reload(); // Refreshes the page
+            }, 3000); // 3000 milliseconds = 3 seconds
+
+            // Optionally, you can submit the form using AJAX or redirect to a thank you page
+            // For example:
+            // this.submit(); // Uncomment this line if you want to submit the form traditionally after showing the message
+        });
+    </script>
+</body>
+</html>

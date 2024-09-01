@@ -1,0 +1,502 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #3e2723; /* Default dark brown text color */
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+header {
+    background-color: rgba(92, 64, 51, 0.8); /* Default deep brown background */
+    color: white;
+    padding: 10px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #d7ccc8; /* Light brown */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2 {
+    color: #6d4c41; /* Medium brown */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.menu-item {
+    border: 1px solid #6d4c41; /* Medium brown border */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input[type="submit"] {
+    background-color: #6d4c41; /* Medium brown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4e342e; /* Darker brown */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #6d4c41; /* Medium brown */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: url('images/background-dark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #003366; /* Dark blue text color */
+}
+
+body.dark-mode header {
+    background-color: rgba(0, 51, 102, 0.8); /* Darker blue background */
+}
+
+body.dark-mode footer {
+    background-color: rgba(0, 51, 102, 0.8); /* Darker blue background */
+}
+
+body.dark-mode nav ul li a {
+    color: #ecf0f1;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #b0c4de; /* Light steel blue */
+}
+
+body.dark-mode form input, body.dark-mode form textarea, body.dark-mode form select {
+    background-color: #2c3e50; /* Dark gray-blue */
+    color: #ecf0f1;
+    border: 1px solid #ecf0f1;
+}
+
+body.dark-mode form input[type="submit"] {
+    background-color: #004080; /* Dark blue */
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add transition effects for dark mode switch */
+body.dark-mode .menu-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+body.dark-mode .menu-item img {
+    transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .menu-item img:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    width: 50px; /* Adjust the size to your preference */
+    height: auto;
+    position: absolute;
+    top: 5px;
+    left: 250px;
+}
+
+header {
+    position: relative;
+    padding-left: 60px; /* Adjust based on the logo size */
+}
+.logo {
+    max-width: 10%;  /* Or any percentage that fits your design */
+    height: auto;
+}
+.rest {
+    max-width: 20%;  /* Or any percentage that fits your design */
+    height: auto;
+}
+.cb {
+    max-width: 50%;  /* Or any percentage that fits your design */
+    height: auto;
+}
+.cb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* or any other height you prefer */
+}
+
+.cb {
+    max-width: 100%;
+    height: auto;
+
+}
+.rest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+/* Logo Styles */
+.logo {
+    width: 100px; /* Adjust the size of the logo */
+    height: 100px; /* Adjust the size of the logo */
+    border-radius: 50%; /* Make the logo circular */
+    transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden; /* Ensure the image is clipped to the circle */
+}
+
+/* Hover Effect */
+.logo:hover {
+    border-radius: 0%; /* Change to square */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+/* Image Animation */
+.rest {
+    width: 100%; /* Adjust the size of the image */
+    height: auto;
+    animation: pulseFade 4s infinite ease-in-out;
+}
+
+/* Pulsating and Fading Keyframes */
+@keyframes pulseFade {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+.rest {
+    width: 200px; /* Adjust the size of the image */
+    height: 200px; /* Adjust the size of the image */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    border-radius: 10px; /* Add a slight border radius */
+}
+
+/* Hover Effect */
+.rest {
+    transform: rotate(10deg) scale(1.1); /* Rotate and zoom in the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */ }
+
+    /* Container styles */
+.rest {
+    position: relative;
+    width: 300px; /* Adjust to your desired image width */
+    height: 200px; /* Adjust to your desired image height */
+}
+
+
+
+/* Text overlay styles */
+.hover-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(69, 11, 11);
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+    font-family: 'Courier New', Courier, monospace;  
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.rest :hover .hover-image {
+    opacity: 0.3; /* Fade the image */
+}
+
+.image-container:hover .hover-text {
+    opacity: 1; /* Show the text */
+}
+/* Container styles */
+.photo-container {
+    width: 300px; /* Adjust to your desired image width */
+    height: 200px; /* Adjust to your desired image height */
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+/* Container for the theme toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Hide the checkbox input */
+.switch input {
+    display: none;
+}
+
+/* The switch itself */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+/* The slider inside the switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* Round slider */
+.slider.round {
+    border-radius: 34px;
+}
+
+/* Position of the slider ball */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Toggle on - dark mode */
+input:checked + .slider {
+    background-color: #2196F3; /* Blue color for the slider when checked */
+}
+
+/* Move the slider ball to the right when checked */
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+/* Text styling */
+#theme-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+.animated-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d8baba;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    animation: typing 10s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #dec2c2; }
+}
+
+.cb-container {
+    perspective: 1000px;
+}
+.cb {
+    width: 1000px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.cb:hover {
+    transform: rotateY(180deg);
+}
+.cb-front, .flip-back {
+    position: absolute;
+    width: 500%;
+    height: 250%;
+    backface-visibility: hidden;
+}
+.cb-back {
+    transform: rotateY(180deg);
+    perspective: 1000px;
+}
+.cb {
+    width: 1000px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.cb:hover {
+    transform: rotateY(180deg);
+}
+.cb-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.cb-back {
+    transform: rotateY(180deg);
+}
+
+
+.cb {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Curved corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.cb:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+cb {
+    width: 1000px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.b-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    overflow: hidden; /* Ensure image doesn't overflow container */
+}
+
+.cb {
+    width: 300px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+.cb-image:hover {
+    transform: scale(1.2); /* Scale up image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+}
+
+
+/* Targeting the image by its class */
+.cb {
+    width: 1000px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
