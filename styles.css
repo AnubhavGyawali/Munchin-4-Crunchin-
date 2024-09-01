@@ -500,8 +500,4 @@ cb {
     width: 1000px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
 }
-img {
-    max-width: 100%;
-    height: auto;
-}
 
